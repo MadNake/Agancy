@@ -19,3 +19,9 @@ img {
   background: url("../img/header__background.png") no-repeat top center;
   background-size: 100% 90%;
 }
+.main-header .main-header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 3vh auto;
+}
