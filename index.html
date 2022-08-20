@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Logoipsum</title>
 </head>
 
 <body>
 	<header class="main-header">
-		<div class="container">
+		<div class="container main-header__container">
 			<nav class="main-header__nav">
-				<svg class="main-header__logo" width="165" height="36">
-					<use xlink:href="sprite.svg#logo"></use>
-				 </svg>
-				 <svg class="main-header__menu" width="41" height="36" >
-					<use xlink:href="sprite.svg#menu"></use>
-				 </svg>
+				<a class="main-header__logo" href="#">
+					<svg width="165" height="36">
+						<use xlink:href="sprite.svg#logo"></use>
+					</svg>
+				</a>
+				<div class="main-header__nav-menu">
+					<svg class="main-header__menu" width="41" height="36">
+						<use xlink:href="sprite.svg#menu"></use>
+					</svg>
+					<div class="toggle-menu">
+					</div>
 			</nav>
-			
-			
+			<div class="main-header__content-wrapper">
+				<div class="hello-content">
+					<h1 class="hello-content__text">Digital Marketing Agency</h1>
+					<button class="hello-content__button">Button</button>
+				</div>
+				<img src="/img/rocket.png" alt="rocket" class="hello-img">
+			</div>
 		</div>
 	</header>
+	<script src="js/script.js"></script>
 </body>
-
 
 </html>

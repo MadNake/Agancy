@@ -2,6 +2,11 @@
 body {
   margin: 0;
   padding: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Poppins", sans-serif;
+  color: #808080;
 }
 
 img {
@@ -9,19 +14,61 @@ img {
 }
 
 .container {
-  min-width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+  padding: 0 10vw;
+  margin: 0 auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #FF6800;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 47px;
+  background-color: #fff;
+  width: 165px;
+  height: 55px;
+  border-radius: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+  font-size: 16px;
+  transition: 0.2s ease all;
 }
 
 .main-header {
   background: url("../img/header__background.png") no-repeat top center;
-  background-size: 100% 90%;
+  background-size: 100% 100%;
+}
+.main-header .main-header__container {
+  height: 80vh;
 }
 .main-header .main-header__nav {
   display: flex;
   justify-content: space-between;
-  width: 90vw;
-  margin: 3vh auto;
+  padding-top: 30px;
+  margin-bottom: 80px;
+}
+.main-header .main-header__menu {
+  cursor: pointer;
+}
+.main-header .main-header__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header .hello-img {
+  width: 550px;
+  height: 490px;
+}
+.main-header .hello-content__text {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 72px;
+  color: #fff;
+  max-width: 450px;
+  margin: 0 0 25px 0;
 }
