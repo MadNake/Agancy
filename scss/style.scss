@@ -255,8 +255,8 @@ button:hover {
 		bottom: 0;
 		left: 0;
 		margin: auto;
-		width: 102px;
-		height: 102px;
+		width: 56px;
+		height: 56px;
 		border-radius: 50%;
 		// box-shadow: 0 0 0 4px #fff;
 		z-index: 1;
@@ -336,6 +336,7 @@ button:hover {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		min-width: 310px	;
 	}
 
 	.blockquote__text {
@@ -378,7 +379,6 @@ button:hover {
 .skill-bars {
 	background: url("/img/skill-bars__background.png") no-repeat center;
 	background-size: 100%;
-
 	.skill-bars__container {
 		display: flex;
 		padding: 60px 10vw;
@@ -438,4 +438,100 @@ button:hover {
 			}
 		}
 	}
+}
+
+
+.faq__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 40px 0 20px 0;
+.faq__content {
+	max-width: 500px;
+}
+.faq__headline {
+	color: #000000;
+	@include fonts(600,32px ,42px );
+	margin-bottom: 5px;
+}
+.faq__text {
+	margin-bottom: 20px;
+}
+.faq__list {
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+}
+.faq__item {
+	max-width: 100%;
+	padding: 15px 45px 15px 18px;
+	background: linear-gradient(90deg, #FF6800 0%, #FF1F00 100%);
+	border-radius: 15px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+.faq__item:hover {
+	font-size: 1.1em;
+}
+.faq__item:before {
+	position: absolute;
+	content: "";
+	width: 14px;
+	height: 2px;
+	background-color: #fff;
+	top: 50%;
+	right: 23px;
+}
+.faq__item:after {
+	position: absolute;
+	content: "";
+	width: 14px;
+	height: 2px;
+	background-color: #fff;
+	top: 50%;
+	right: 23px;
+	transform: rotate(90deg);
+}
+.faq__item:hover:after,
+.faq__item:hover:before {
+	height: 4px;
+	transition: all 0.1s ease;
+	width: 16px;
+	top: 49%px;
+	right: 22px;
+}
+
+.faq__question {
+	color: #fff;
+}
+.faq__answer {
+	display: none;
+}
+
+.faq__item_show {
+	background: #fff;
+	position: relative;
+	border-radius: 15px;
+	border: #ff6800 solid 2px;
+}
+
+.faq__item_show:before {
+	position: absolute;
+	content: "";
+	width: 14px;
+	height: 2px;
+	background-color: #000;
+	top: 50%;
+	right: 23px;
+	z-index: 1;
+}
+.faq__question_show {
+	color: #333333;
+	margin-bottom: 20px;
+}
+.faq__answer_show {
+	color: #808080;
+	display: block;
+}
 }

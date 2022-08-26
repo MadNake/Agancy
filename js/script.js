@@ -14,3 +14,26 @@ $(window).scroll(function(){
 		 el.addClass('bar-animation');
 	}
 });
+
+
+// $(function() {
+// 	$('.faq__item').click(function(){
+// 		 $(this).toggleClass('faq__item_show');
+// 	});
+// });
+
+
+let accItem = document.querySelectorAll(".faq__item");
+let accQuestion = document.querySelectorAll(".faq__question");
+let accAnswer = document.querySelectorAll(".faq__answer");
+
+for (let i = 0; i < accItem.length; i++) {
+		accItem[i].addEventListener("click", function(evt) {
+		evt.preventDefault();
+		accItem[i].classList.toggle("faq__item_show");
+		accQuestion[i].classList.toggle("faq__question_show");
+		accAnswer[i].classList.toggle("faq__answer_show");
+	})
+	
+}
+
