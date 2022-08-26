@@ -6,3 +6,11 @@ $(function() {
 		 $(".nav-list-wrapper").toggleClass("hidden")
 	});
 });
+
+var el = $(".bar");
+
+$(window).scroll(function(){
+	if ( $(this).scrollTop() > el.offset().top - window.screen.height ) {
+		 el.addClass('bar-animation');
+	}
+});

@@ -149,14 +149,12 @@ button:hover {
 	}
 
 	.nav-list-wrapper {
-		// width: 50vw;
-		// height: 100vh;
 		background-color: transparent;
 		transition: all ease 0.7s;
 		color: #fff;
 	}
 	.hidden {
-		transform: translateY(-300%);
+		// transform: translateY(-300%);
 		position: block;
 		top: 0;
 		left: 20vw;
@@ -299,82 +297,145 @@ button:hover {
 	flex-direction: column;
 	align-items: center;
 
-.testimonials__headline {
-	margin-bottom: 6px;
-	@include fonts(600, 32px, 42px);
-	color: #000;
-}
-.testimonials__headline-text {
-	margin-bottom: 30px;
-}
-.testimonials__content {
-	display: flex;
-	gap: 35px;
-	padding-bottom: 50px;
-}
-.testimonials__item {
-	max-width: 390px;
-	border-radius: 15px;
-	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-	// border: linear 2px #ff6800;
-	position: relative;
-	background-color: #fff;
-}
+	.testimonials__headline {
+		margin-bottom: 6px;
+		@include fonts(600, 32px, 42px);
+		color: #000;
+	}
+	.testimonials__headline-text {
+		margin-bottom: 30px;
+	}
+	.testimonials__content {
+		display: flex;
+		gap: 35px;
+		padding-bottom: 50px;
+	}
+	.testimonials__item {
+		max-width: 390px;
+		border-radius: 15px;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+		// border: linear 2px #ff6800;
+		position: relative;
+		background-color: #fff;
+	}
 
-.testimonials__item:before {
+	.testimonials__item:before {
 		content: "";
 		position: absolute;
 		top: -2px;
 		bottom: -2px;
 		left: -2px;
 		right: -2px;
-		background: linear-gradient(35deg, #FF6800, #FF1F00);
+		background: linear-gradient(35deg, #ff6800, #ff1f00);
 		border-radius: 17px;
 		z-index: -1;
+	}
+
+	.blockquote {
+		margin: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.blockquote__text {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+	.blockquote__quote-owner-info {
+		display: grid;
+		grid-template-columns: 55px 1fr;
+		grid-template-rows: 30px 30px;
+		column-gap: 15px;
+		align-items: center;
+	}
+	.blockquote__photo {
+		grid-row: 1 / 3;
+	}
+	.blockquote__name {
+		color: #000;
+	}
+	.blockquote__post {
+		@include fonts(300, 10px, 10px);
+	}
+	.testimonials__slider {
+		display: flex;
+		gap: 24px;
+		margin-bottom: 60px;
+	}
+	.testimonials__slider-item {
+		width: 16px;
+		height: 16px;
+		background-color: transparent;
+		border-radius: 50%;
+	}
+	.slider-item_active {
+		background: linear-gradient(90deg, #ff6800 0%, #ff1f00 100%);
+		cursor: pointer;
+	}
 }
 
-.blockquote {
-	margin: 40px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+.skill-bars {
+	background: url("/img/skill-bars__background.png") no-repeat center;
+	background-size: 100%;
 
-.blockquote__text {
-	text-align: center;
-	margin-bottom: 24px;
-}
-.blockquote__quote-owner-info {
-	display: grid;
-	grid-template-columns: 55px 1fr;
-	grid-template-rows: 30px 30px;
-	column-gap: 15px;
-	align-items: center;
-	
-}
-.blockquote__photo {
-	grid-row: 1 / 3;
-}
-.blockquote__name {
-	color: #000;
-}
-.blockquote__post {
-	@include fonts(300,10px ,10px )
-}
-.testimonials__slider {
-	display: flex;
-	gap: 24px;
-	margin-bottom: 60px;
-}
-.testimonials__slider-item {
-	width: 16px;
-	height: 16px;
-	background-color: transparent;
-	border-radius: 50%;
-}
-.slider-item_active {
-	background: linear-gradient(90deg, #FF6800 0%, #FF1F00 100%);
-	cursor: pointer;
-}
+	.skill-bars__container {
+		display: flex;
+		padding: 60px 10vw;
+		justify-content: space-between;
+		align-items: center;
+	}
 
+	.skill-bars__content {
+		max-width: 490px;
+		color: #cccccc;
+	}
+	.skill-bars__headline {
+		max-width: 315px;
+		color: #fff;
+		@include fonts(600, 32px, 42px);
+		margin-bottom: 10px;
+	}
+	.skill-bars__text {
+		margin-bottom: 40px;
+	}
+	.skill-bars__list {
+		width: 380px;
+	}
+	.skill-bars__item {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 15px;
+		& .bar {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			background-color: #ffe0cb;
+			height: 8px;
+			border-radius: 1000px;
+		}
+		& .bar:before {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 75%;
+			background: linear-gradient(90deg, #ff6800 0%, #ff1f00 100%);
+			border-radius: 1000px;
+		}
+		.bar-animation:before {
+			animation: bar 3s ease;
+		}
+
+		&:nth-child(2) .bar:before {
+			width: 90%;
+		}
+		&:nth-child(3) .bar:before {
+			width: 50%;
+		}
+		@keyframes bar {
+			from {
+				width: 0;
+			}
+		}
+	}
 }

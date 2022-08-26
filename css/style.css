@@ -145,7 +145,6 @@ button:hover {
   color: #fff;
 }
 .main-header .hidden {
-  transform: translateY(-300%);
   position: block;
   top: 0;
   left: 20vw;
@@ -303,7 +302,7 @@ button:hover {
   bottom: -2px;
   left: -2px;
   right: -2px;
-  background: linear-gradient(35deg, #FF6800, #FF1F00);
+  background: linear-gradient(35deg, #ff6800, #ff1f00);
   border-radius: 17px;
   z-index: -1;
 }
@@ -348,6 +347,76 @@ button:hover {
   border-radius: 50%;
 }
 .testimonials__container .slider-item_active {
-  background: linear-gradient(90deg, #FF6800 0%, #FF1F00 100%);
+  background: linear-gradient(90deg, #ff6800 0%, #ff1f00 100%);
   cursor: pointer;
+}
+
+.skill-bars {
+  background: url("/img/skill-bars__background.png") no-repeat center;
+  background-size: 100%;
+}
+.skill-bars .skill-bars__container {
+  display: flex;
+  padding: 60px 10vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-bars .skill-bars__content {
+  max-width: 490px;
+  color: #cccccc;
+}
+.skill-bars .skill-bars__headline {
+  max-width: 315px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  margin-bottom: 10px;
+}
+.skill-bars .skill-bars__text {
+  margin-bottom: 40px;
+}
+.skill-bars .skill-bars__list {
+  width: 380px;
+}
+.skill-bars .skill-bars__item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.skill-bars .skill-bars__item .bar {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: #ffe0cb;
+  height: 8px;
+  border-radius: 1000px;
+}
+.skill-bars .skill-bars__item .bar:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 75%;
+  background: linear-gradient(90deg, #ff6800 0%, #ff1f00 100%);
+  border-radius: 1000px;
+}
+.skill-bars .skill-bars__item .bar-animation:before {
+  -webkit-animation: bar 3s ease;
+          animation: bar 3s ease;
+}
+.skill-bars .skill-bars__item:nth-child(2) .bar:before {
+  width: 90%;
+}
+.skill-bars .skill-bars__item:nth-child(3) .bar:before {
+  width: 50%;
+}
+@-webkit-keyframes bar {
+  from {
+    width: 0;
+  }
+}
+@keyframes bar {
+  from {
+    width: 0;
+  }
 }
