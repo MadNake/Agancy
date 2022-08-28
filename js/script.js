@@ -33,6 +33,11 @@ for (let i = 0; i < accItem.length; i++) {
 		accItem[i].classList.toggle("faq__item_show");
 		accQuestion[i].classList.toggle("faq__question_show");
 		accAnswer[i].classList.toggle("faq__answer_show");
+		if (accAnswer[i].style.maxHeight) {
+			accAnswer[i].style.maxHeight = null;
+		 } else {
+			accAnswer[i].style.maxHeight = accAnswer[i].scrollHeight + "px";
+		 } 
 	})
 	
 }
