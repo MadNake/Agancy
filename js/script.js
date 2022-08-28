@@ -4,6 +4,11 @@ $(function() {
 	$('.main-header__nav-menu').click(function(){
 		 $(this).toggleClass('open');
 		 $(".nav-list-wrapper").toggleClass("hidden")
+		 if(window.innerWidth <= 1000 ){
+			$("body").toggleClass("scroll-control")
+			console.log("work")
+	 };
+
 	});
 });
 

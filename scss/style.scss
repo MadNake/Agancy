@@ -42,6 +42,10 @@ img {
 	max-width: 100%;
 }
 
+.scroll-control {
+	overflow: hidden;
+}
+
 .container {
 	padding: 0 10vw;
 	margin: 0 auto;
@@ -612,10 +616,12 @@ button:hover {
 		row-gap: 30px;
 	}
 	.main-header .main-header__container {
+		min-height: 100vh;
 		height: auto;
 	}
 	.main-header__content-wrapper {
 		flex-direction: column;
+		
 	}
 	.hello-content {
 		text-align: center;
@@ -626,8 +632,19 @@ button:hover {
 		width: 380px;
 		height: 340px;
 	}
-	.nav-list-wrapper {
-		display: none;
+	.main-header .nav-list-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #ff6600;
+		display: flex;
+		justify-content: center;
+	}
+	.main-header .main-header__nav-list {
+		flex-direction: column;
+		justify-content: center;
 	}
 	.faq__container {
 		flex-direction: column;
