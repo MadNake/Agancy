@@ -359,7 +359,7 @@ button:hover {
 }
 
 .skill-bars {
-  background: url("/img/skill-bars__background.png") no-repeat center;
+  background: url("../img/skill-bars__background.png") no-repeat center;
   background-size: 100% 100%;
 }
 .skill-bars .skill-bars__container {
@@ -531,7 +531,7 @@ button:hover {
 }
 
 .contacts {
-  background: center no-repeat url("/img/contacts_background.png");
+  background: center no-repeat url("../img/contacts_background.png");
   background-size: 100% 100%;
 }
 .contacts .contacts__container {
@@ -642,7 +642,7 @@ button:hover {
     background-size: auto 100%;
   }
   .skill-bars {
-    background: url("/img/skill-bars__background-mobile.png") no-repeat center;
+    background: url("../img/skill-bars__background-mobile.png") no-repeat center;
     background-size: 100% 100%;
   }
 }
@@ -662,7 +662,7 @@ button:hover {
     text-align: center;
   }
   .contacts {
-    background: center no-repeat url("/img/contacts_background-mobile.png");
+    background: center no-repeat url("../img/contacts_background-mobile.png");
     background-size: 100% 100%;
   }
 }
